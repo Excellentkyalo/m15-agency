@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M15 DIGITAL Dashboard</title>
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: system-ui, sans-serif; margin: 0; padding: 2rem; }
+        h1 { background: linear-gradient(135deg, #00e5ff, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 0.5rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+        .card { background: #111; border: 1px solid #222; padding: 1.5rem; border-radius: 12px; text-align: center; }
+        .num { font-size: 2.5rem; font-weight: 800; background: linear-gradient(135deg, #00e5ff, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .label { color: #888; font-size: 0.9rem; margin-bottom: 0.5rem; }
+        a { color: #00e5ff; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+        .btn { background: #1a1a1a; border: 1px solid #333; padding: 0.8rem 1.5rem; border-radius: 8px; color: #fff; text-decoration: none; transition: 0.2s; }
+        .btn:hover { border-color: #00e5ff; }
+    </style>
+</head>
+<body>
+    <h1>🚀 M15 DIGITAL Admin Dashboard</h1>
+    <p>Welcome back! Manage your site without touching code.</p>
+
+    <div class="grid">
+        <div class="card"><div class="label">Projects</div><div class="num">{{ projects_count }}</div></div>
+        <div class="card"><div class="label">Approved Reviews</div><div class="num">{{ testimonials_count }}</div></div>
+        <div class="card"><div class="label">Pending Reviews</div><div class="num" style="color:#fbbf24;-webkit-text-fill-color:#fbbf24">{{ pending_testimonials }}</div></div>
+        <div class="card"><div class="label">Unread Messages</div><div class="num" style="color:#ef4444;-webkit-text-fill-color:#ef4444">{{ messages_count }}</div></div>
+    </div>
+
+    <h3>📌 Quick Actions</h3>
+    <div class="actions">
+        <a href="/admin/projects/project/" class="btn">➕ Add Project</a>
+        <a href="/admin/testimonials/testimonial/" class="btn">💬 Manage Reviews</a>
+        <a href="/admin/core/sitesettings/" class="btn">⚙️ Edit Site Content</a>
+        <a href="/admin/core/sociallink/" class="btn">🔗 Add Social Links</a>
+        <a href="/admin/contacts/contactmessage/" class="btn">📩 View Messages</a>
+        <a href="/" target="_blank" class="btn">🌐 View Live Site</a>
+    </div>
+</body>
+</html>

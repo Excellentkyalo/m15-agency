@@ -1,0 +1,351 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="hero-section" id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-10 hero-content reveal">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Premium Web Developent Tech Agency
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-main">{{ settings.hero_title|default:"M15 DIGITAL" }}</span>
+          <span class="hero-subtitle">{{ settings.hero_subtitle|default:"We Code You Grow" }}</span>
+        </h1>
+        <p class="hero-description">
+          {{ settings.hero_description|default:"We craft futuristic, award-winning digital products that elevate brands. From web development to brand identity — we deliver excellence." }}
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-glow">
+            <i class="bi bi-grid-3x3-gap"></i> View Projects
+          </a>
+          <a href="#contact" class="btn-glass">
+            <i class="bi bi-arrow-right-circle"></i> Hire Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ABOUT SECTION ==================== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Left: Image -->
+      <div class="reveal-left">
+        <div class="about-image-wrapper">
+          <!-- Replace src with your actual about image -->
+          <img src="{% static 'images/M 15 Digital.jpeg' %}" 
+               alt="M15 Team" 
+               class="about-image">
+        </div>
+      </div>
+      
+      <!-- Right: Content -->
+      <div class="reveal-right">
+        <span class="section-label">About M15 DIGITAL</span>
+        <h2 class="section-title">We Build <span class="gradient-text">Futuristic</span> Digital Products</h2>
+        <p class="section-description">
+          {{ settings.about_text|default:"M15 DIGITAL is a premium creative technology agency specializing in building next-generation digital experiences. We combine cutting-edge design with robust engineering to deliver products that make an impact." }}
+        </p>
+        
+        <div class="about-features">
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="bi bi-lightning-charge"></i></div>
+            <div>
+              <h4>Lightning Fast</h4>
+              <p>Optimized for speed with modern frameworks and best practices.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="bi bi-shield-check"></i></div>
+            <div>
+              <h4>Secure by Design</h4>
+              <p>Built with security-first architecture for Django backends.</p>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-icon"><i class="bi bi-phone"></i></div>
+            <div>
+              <h4>Mobile First</h4>
+              <p>Every project is designed to look stunning on all devices.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Animated Counters -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="150">5</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="98">4</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="8">1</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+        
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES SECTION ==================== -->
+<section class="section" id="services" style="background: var(--bg-secondary);">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-label justify-content-center">What We Do</span>
+      <h2 class="section-title">Premium <span class="gradient-text">Services</span></h2>
+      <p class="section-description mx-auto">
+        End-to-end digital solutions crafted with precision, creativity, and cutting-edge technology.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <!-- Web Development -->
+      <div class="service-card reveal" style="transition-delay: 0.1s;">
+        <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="service-icon-box"><i class="bi bi-globe2"></i></div>
+        <h3>Web Development</h3>
+        <p>Full-stack web applications built with modern frameworks and scalable architecture.</p>
+      </div>
+
+      <!-- Django Backend -->
+      <div class="service-card reveal" style="transition-delay: 0.15s;">
+        <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="service-icon-box"><i class="bi bi-server"></i></div>
+        <h3>Django Backend</h3>
+        <p>Robust, secure, and scalable server-side solutions with Django REST framework.</p>
+      </div>
+
+      <!-- UI/UX Design -->
+      <div class="service-card reveal" style="transition-delay: 0.2s;">
+        <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="service-icon-box"><i class="bi bi-palette2"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Intuitive, beautiful interfaces crafted through user research and iterative prototyping.</p>
+      </div>
+
+      <!-- Responsive Design -->
+      <div class="service-card reveal" style="transition-delay: 0.25s;">
+        <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="service-icon-box"><i class="bi bi-phone"></i></div>
+        <h3>Responsive Design</h3>
+        <p>Seamless experiences across all screen sizes with mobile-first design principles.</p>
+      </div>
+
+      <!-- Brand Identity -->
+      <div class="service-card reveal" style="transition-delay: 0.3s;">
+        <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="service-icon-box"><i class="bi bi-brush"></i></div>
+        <h3>Brand Identity</h3>
+        <p>Complete brand systems including logos, typography, color palettes, and guidelines.</p>
+      </div>
+
+      <!-- SEO Optimization -->
+      <div class="service-card reveal" style="transition-delay: 0.35s;">
+        <div class="service-arrow"><i class="bi bi-arrow-up-right"></i></div>
+        <div class="service-icon-box"><i class="bi bi-graph-up"></i></div>
+        <h3>SEO Optimization</h3>
+        <p>Technical SEO, performance optimization, and content strategy for top rankings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROJECTS SECTION ==================== -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-label justify-content-center">Our Work</span>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-description mx-auto">
+        A curated selection of premium digital products we've crafted for forward-thinking brands.
+      </p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="portfolio-filters justify-content-center d-flex reveal mb-4">
+      <button class="btn-glass filter-btn active" data-filter="all">All</button>
+      <button class="btn-glass filter-btn" data-filter="web">Web Dev</button>
+      <button class="btn-glass filter-btn" data-filter="design">UI/UX</button>
+      <button class="btn-glass filter-btn" data-filter="backend">Backend</button>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="bento-grid reveal">
+      {% for p in projects %}
+      <div class="bento-item" data-category="{{ p.category.slug|default:'web' }}">
+        <img src="{{ p.cover_image.url }}" alt="{{ p.title }}" class="bento-thumbnail">
+        <div class="bento-overlay">
+          <span class="bento-category">{{ p.category.name|default:"Project" }}</span>
+          <h3 class="bento-title">{{ p.title }}</h3>
+          <p class="text-muted small mb-3">{{ p.technologies|truncatechars:60 }}</p>
+          <div class="bento-actions">
+            {% if p.live_url %}
+              <a href="{{ p.live_url }}" target="_blank" class="bento-action-btn">
+                <i class="bi bi-box-arrow-up-right"></i> Live Demo
+              </a>
+            {% endif %}
+            {% if p.github_url %}
+              <a href="{{ p.github_url }}" target="_blank" class="bento-action-btn">
+                <i class="bi bi-github"></i> Code
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="col-12 text-center py-5">
+        <p class="text-muted">No projects yet. Add some from the dashboard!</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS SECTION ==================== -->
+<!-- ==================== TESTIMONIALS SECTION ==================== -->
+<section class="section" id="testimonials" style="background: var(--bg-secondary);">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <span class="section-label justify-content-center">Client Love</span>
+      <h2 class="section-title">What They <span class="gradient-text">Say</span></h2>
+    </div>
+
+    <!-- Django Messages (Shows success/error alerts) -->
+    {% if messages %}
+    <div class="row justify-content-center mb-4">
+      <div class="col-lg-8">
+        {% for msg in messages %}
+          <div class="alert alert-{{ msg.tags }} alert-dismissible fade show glass-card py-3">
+            {{ msg }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- APPROVED REVIEWS CAROUSEL -->
+    <div class="testimonial-track reveal mb-5">
+      {% for t in testimonials %}
+      <div class="glass-card testi-card">
+        <div class="stars">
+          {% for i in "12345" %}{% if forloop.counter <= t.rating %}★{% else %}☆{% endif %}{% endfor %}
+        </div>
+        <p class="testimonial-text">"{{ t.message|truncatechars:150 }}"</p>
+        <div class="testimonial-author">
+          {% if t.image %}
+            <img src="{{ t.image.url }}" alt="{{ t.name }}" class="testimonial-avatar">
+          {% else %}
+            <div class="testimonial-avatar d-flex align-items-center justify-content-center" style="background:var(--glass); color:var(--cyan); font-weight:700;">{{ t.name|first|upper }}</div>
+          {% endif %}
+          <div>
+            <div class="testimonial-author-name">{{ t.name }}</div>
+            <div class="testimonial-author-role">{{ t.role|default:"Client" }}</div>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+      <div class="glass-card testi-card text-center w-100">
+        <p class="text-muted mb-0">WE WOULD LOVE TO HEAR YOUR FEEDBACK OUR ESTEEMED CUSTOMER 👇</p>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- 🔽 SUBMISSION FORM 🔽 -->
+    <div class="glass-card p-4 p-md-5 reveal" style="max-width: 700px; margin: 0 auto;">
+      <h3 class="text-center mb-4">Share Your Experience</h3>
+      <form action="{% url 'submit_testimonial' %}" method="POST" enctype="multipart/form-data" id="reviewForm">
+        {% csrf_token %}
+        <div class="row g-3">
+          <div class="col-md-6">
+            <input type="text" name="name" class="form-control form-glass" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6">
+            <input type="text" name="role" class="form-control form-glass" placeholder="Role / Company (Optional)">
+          </div>
+          
+          <div class="col-12 text-center my-3">
+            <p class="mb-2 text-muted">Your Rating</p>
+            <div class="star-rating" id="starRating">
+              <span data-val="1">★</span>
+              <span data-val="2">★</span>
+              <span data-val="3">★</span>
+              <span data-val="4">★</span>
+              <span data-val="5">★</span>
+            </div>
+            <input type="hidden" name="rating" id="ratingInput" value="0" required>
+            <p class="text-danger small mt-2" id="ratingError" style="display:none;">Please select a rating</p>
+          </div>
+
+          <div class="col-12">
+            <textarea name="message" class="form-control form-glass" rows="4" placeholder="Write your review here..." required></textarea>
+          </div>
+
+          <div class="col-12">
+            <label class="text-muted small mb-2 d-block">Optional: Profile Photo</label>
+            <input type="file" name="image" class="form-control form-glass" accept="image/*">
+          </div>
+
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn-glow w-100" id="submitBtn">
+              <i class="bi bi-send me-2"></i> Submit Review
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT SECTION ==================== -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5 reveal">
+          <span class="section-label justify-content-center">Get In Touch</span>
+          <h2 class="section-title">Let's Build <span class="gradient-text">Something Amazing</span></h2>
+          <p class="section-description mx-auto">
+            Ready to elevate your digital presence? Fill out the form and we'll reply within 24 hours.
+          </p>
+        </div>
+
+        <form id="contactForm" action="{% url 'contact_submit' %}" method="POST" class="glass-card p-4 p-md-5 reveal">
+          {% csrf_token %}
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" name="name" placeholder="Your Name" required class="form-control form-glass">
+            </div>
+            <div class="col-md-6">
+              <input type="email" name="email" placeholder="Your Email" required class="form-control form-glass">
+            </div>
+            <div class="col-12">
+              <textarea name="message" placeholder="Tell us about your project..." required class="form-control form-glass"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn-glow w-100">
+                <i class="bi bi-send me-2"></i> Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
