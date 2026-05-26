@@ -36,21 +36,3 @@ def contact_submit(request):
         )
     return home(request)
 
-def create_admin_temp(request):
-    """TEMPORARY: Creates superuser. DELETE THIS VIEW AFTER USE."""
-    # Simple secret token to prevent public access
-    secret = os.environ.get('ADMIN_CREATE_SECRET', 'm15-secure-2026')
-    token = request.GET.get('token')
-    
-    if token != secret:
-        return HttpResponse("❌ Access denied", status=403)
-    
-    User = get_user_model()
-    if not User.objects.filter(username='admin').exists():
-        User.objects.create_superuser(
-            username='admin',
-            email='m15digital15@gmail.com',
-            password='Munene11989'  # Change this after first login!
-        )
-        return HttpResponse("✅ Superuser created! NOW DELETE THIS VIEW FROM CODE.")
-    return HttpResponse("⚠️ Admin already exists.")

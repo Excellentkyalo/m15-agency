@@ -22,8 +22,7 @@ urlpatterns = [
     # 💬 Testimonials (Root-level include, matches your template tag exactly)
     path('', include('testimonials.urls')),
 
-    # TEMPORARY: Delete this line after creating admin
-path('create-admin-temp/', views.create_admin_temp),
+    
 ]
 
 # Serve media files in development
