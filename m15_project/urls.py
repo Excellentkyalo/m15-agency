@@ -6,7 +6,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from core.views import home, contact_submit
-
+from core import views  # or: from core.views import home, contact_submit, create_admin_temp
 urlpatterns = [
     # 🔐 Admin
     path('admin/', admin.site.urls),
@@ -21,6 +21,9 @@ urlpatterns = [
     
     # 💬 Testimonials (Root-level include, matches your template tag exactly)
     path('', include('testimonials.urls')),
+
+    # TEMPORARY: Delete this line after creating admin
+path('create-admin-temp/', views.create_admin_temp),
 ]
 
 # Serve media files in development
